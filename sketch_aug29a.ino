@@ -70,14 +70,24 @@ for(0;i<4;i++){
     code = switch_D;
     userInput[i]=code;
     delay(1000);
-    ;
     }
+    //reset
+  A=LOW;B=LOW;C=LOW;D=LOW;  
   digitalWrite(switch_A, LOW);
   digitalWrite(switch_B, LOW);
   digitalWrite(switch_C, LOW);
-  digitalWrite(switch_D, LOW);  
-  Serial.print(userInput[i]);//display array  
+  digitalWrite(switch_D, LOW);
   }//end for loop
 
+  //display array
+  for(i=0;i<4;i++){  
+    Serial.print(userInput[i]);
+    delay(1000);
+  }
+  A=LOW;B=LOW;C=LOW;D=LOW;  
+  digitalWrite(switch_A, LOW);
+  digitalWrite(switch_B, LOW);
+  digitalWrite(switch_C, LOW);
+  digitalWrite(switch_D, LOW);
 
 }
